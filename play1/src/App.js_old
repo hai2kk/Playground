@@ -1,0 +1,27 @@
+import React, { Component } from "react";
+import { Header, CardHolder } from "./component";
+import { HeaderClass, CardClass, CardAddClass } from "./css/Styles.css";
+import addButton from "./img/add.png";
+
+class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <header>
+          <Header style={HeaderClass} title="My Sticky" />
+        </header>
+        <section>
+          <CardHolder
+            cardStyle={CardClass}
+            addClass={CardAddClass}
+            altText="Add new card"
+            initialNumberOfCards="0"
+            addCardImage={addButton}
+          />
+        </section>
+      </React.Fragment>
+    );
+  }
+}
+
+export default App;
